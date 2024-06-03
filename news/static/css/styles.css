@@ -1,0 +1,40 @@
+/* Header styles */
+.header {
+    background-image: url('../images/abc.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0; 
+    text-align: center;
+    color: #ffffff; 
+}
+
+.logo {
+    font-size: 3rem; /* Adjust font size */
+    margin-bottom: 20px; /* Spacing between logo and tagline */
+}
+
+.tagline {
+    font-size: 1.5rem; /* Adjust font size */
+    opacity: 0.8; /* Adjust opacity */
+    font-style: italic; /* Italics for tagline */
+}
+
+/* Animation for logo and tagline */
+.logo, .tagline {
+    animation: fadeInUp 1s ease-out; /* Apply fade-in animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Initial position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+    }
+}
+
+.content {
+    padding-top: 40px;
+}

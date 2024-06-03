@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+Breaking News!!
+{% endblock %}
+
+
+{% block body %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles123.css' %}">
+<form method="get">
+    {%csrf_token%}
+    <div class="button">
+    <button type="submit" class="btn btn-success" name="local" value="local" onclick="/local/">Local News</button>
+    <button type="submit" class="btn btn-secondary" name="national" value="national" onclick="/national/">National News</button>
+    <button type="submit" class="btn btn-primary" name="international" value="international" onclick="/international/">International News</button>
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+Local Breaking!!
+{% endblock %}
+
+{% block body %}
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+
+{% for x,y in local.items %}
+<div class="accordion-item">
+    <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+        <button class="accordion-button collapsed btn btn-dark"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">
+            {{ x }}
+        </button>
+    </h2>
+    <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            {{ y }}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+</div>
+
+{% endblock %}
